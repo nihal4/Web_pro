@@ -83,7 +83,7 @@ li {
     background-color: #242424;
   }
   .navbar-part2 {
-    height: 93vh;
+    height: 100vh;
     width: 100vw;
   }
   .navbar-list {
@@ -101,6 +101,7 @@ li {
     flex-direction: column;
     justify-content: start;
     background-color: transparent;
+    flex-wrap: nowrap;
   }
 }
 .toggle {

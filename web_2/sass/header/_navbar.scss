@@ -62,7 +62,7 @@
         background-color: $nav-bg-color;
     }
     .navbar-part2{
-        height: 93vh;
+        height: 100vh;
         width: 100vw;
     }
     .navbar-list{
@@ -82,6 +82,7 @@
         flex-direction: column;
         justify-content: start;
         background-color: transparent;
+        flex-wrap: nowrap;
     }
 }
 .toggle{
