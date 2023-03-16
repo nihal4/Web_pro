@@ -8,7 +8,7 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: #242424;
 }
@@ -19,13 +19,32 @@
   font-family: "Josefin Sans", sans-serif;
 }
 .navbar-burger {
-  display: flex;
   flex-direction: column;
   gap: 2px;
+  display: none;
 }
-.navbar-burger-line {
+.navbar-burger-line1, .navbar-burger-line2, .navbar-burger-line3 {
   border-radius: 100px;
   height: 5px;
-  width: 27px;
+  width: 30px;
   background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+.line1 {
+  transform: translate(0px, 0px) rotate(45deg);
+}
+
+.line2 {
+  display: none;
+}
+
+.line3 {
+  transform: translate(0px, -7px) rotate(-45deg);
+}
+
+@media (max-width: 480px) {
+  .navbar-burger {
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */
