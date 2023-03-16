@@ -1,4 +1,7 @@
 .navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -11,11 +14,16 @@
         align-items: center;
         justify-content: space-around;
     }
+    &-part2{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 
     &-logo{
         text-decoration: none;
         color: $font-nav-color;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-family: $josefin-font;
     }
     &-burger{
@@ -33,11 +41,12 @@
     &-list{
         display: flex;
         transition: all .5s;
-        gap: 1rem;
+        gap: 4rem;
         font-family:$josefin-font;
         &-items{
             &-text{
                 color: $font-nav-color;
+                font-size: 1.25rem;
             }
         }
     }
@@ -62,7 +71,8 @@
         background-color: $nav-bg-color;
     }
     .navbar-part2{
-        height: 100vh;
+        //height: 60vh;
+        height: 100%;
         width: 100vw;
     }
     .navbar-list{
@@ -74,11 +84,16 @@
         background-color: $nav-bg-color;
         height: 100%;
         width: 100%;
+        &-items-text{
+            font-size: 1.5rem;
+        }
         //height: 93vh;
         //width: 100vw;
     }
     .navbar{
-        height: 100vh;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
         flex-direction: column;
         justify-content: start;
         background-color: transparent;

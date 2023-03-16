@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
 }
+body,
+html{
+    height: 100%;
+}
 a{
     text-decoration: none;
 }
@@ -21,7 +25,7 @@ li{
 $josefin-font :'Josefin Sans', sans-serif;
 
 //nav-color
-$nav-bg-color:#242424;
+$nav-bg-color: #262626ad;
 $font-nav-color:#ffffff;
 
 //media
