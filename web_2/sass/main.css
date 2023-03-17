@@ -98,7 +98,7 @@ li {
 }
 
 .color-trans {
-  background-color: rgba(38, 38, 38, 0.2823529412);
+  background-color: rgba(38, 38, 38, 0.0901960784);
 }
 
 @media (max-width: 480px) {
@@ -108,7 +108,7 @@ li {
   .navbar-part1 {
     height: 65px;
     width: 100%;
-    background-color: rgba(38, 38, 38, 0.2823529412);
+    background-color: #252525;
   }
   .navbar-part2 {
     height: 100%;
@@ -120,7 +120,7 @@ li {
     align-items: center;
     justify-content: center;
     transform: translate(-50rem, 0px);
-    background-color: rgba(38, 38, 38, 0.2823529412);
+    background-color: #252525;
     height: 100%;
     width: 100%;
   }
@@ -139,17 +139,28 @@ li {
 }
 .toggle {
   transform: translate(0px, 0px);
+  display: flex;
 }
 
 .header {
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 1000%;
+  height: 100%;
 }
 .header-bgimg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #252525;
 }/*# sourceMappingURL=main.css.map */

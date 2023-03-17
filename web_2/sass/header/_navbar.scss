@@ -79,12 +79,13 @@
     .navbar-part1{
         height: 65px;
         width: 100%;
-        background-color: $nav-bg-color;
+        background-color: $nav-bg-scroll;
     }
     .navbar-part2{
         //height: 60vh;
         height: 100%;
         width: 100vw;
+        
     }
     .navbar-list{
         display: flex;
@@ -92,7 +93,7 @@
         align-items: center;
         justify-content: center;
         transform: translate(-50rem,0px);
-        background-color: $nav-bg-color;
+        background-color: $nav-bg-scroll;
         height: 100%;
         width: 100%;
         &-items-text{
@@ -113,4 +114,6 @@
 }
 .toggle{
     transform: translate(0px,0px);
+    display: flex;
 }
+
