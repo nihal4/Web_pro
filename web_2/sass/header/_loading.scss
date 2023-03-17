@@ -1,4 +1,27 @@
+@keyframes bouch {
+  0% {
+    transform: scale(0.5);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(0.5);
+  }
+  60%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 #loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -7,6 +30,16 @@
   height: 100vh;
   background-color: $nav-bg-scroll;
 }
-.leader{
-    
+
+.loader-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 50%;
+  animation: bouch 10s;
+  &-text {
+    font-family: $josefin-font;
+    color: $naav-text-hover;
+  }
 }
