@@ -8,3 +8,17 @@ function make_cross(){
     burger_line3.classList.toggle('line3')
     navbar_list.classList.toggle('toggle')
 }
+
+var navabr = document.querySelector('.navbar');
+
+window.onscroll = function(){
+    if(document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200){
+        navabr.classList.add('change-color');
+        navabr.classList.remove('color-trans');
+    }
+    else{
+        navabr.classList.add('color-trans');
+        navabr.classList.remove('change-color');
+    }
+}
+

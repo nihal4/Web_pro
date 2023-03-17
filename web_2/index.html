@@ -25,7 +25,9 @@
   <body>
     <nav class="navbar">
       <div class="navbar-part1">
-        <a href="#home" class="navbar-logo"> LENS </a>
+        <a href="#home" class="navbar-logo" onclick="make_cross()">
+          <img src="logos/logo.png.webp" alt="" class="navbar-logo-img" />
+        </a>
         <div class="navbar-burger" onclick="make_cross()">
           <div class="navbar-burger-line1"></div>
           <div class="navbar-burger-line2"></div>
@@ -34,26 +36,36 @@
       </div>
       <div class="navbar-part2">
         <ul class="navbar-list">
-            <li class="navbar-list-items">
-              <a href="#" class="navbar-list-items-text">gallery</a>
-            </li>
-            <li class="navbar-list-items">
-              <a href="#" class="navbar-list-items-text">gallery</a>
-            </li>
-            <li class="navbar-list-items">
-              <a href="#" class="navbar-list-items-text">gallery</a>
-            </li>
-            <li class="navbar-list-items">
-                <a href="#" class="navbar-list-items-text">gallery</a>
-              </li>
-              <li class="navbar-list-items">
-                <a href="#" class="navbar-list-items-text">gallery</a>
-              </li>
-          </ul>
+          <li class="navbar-list-items slide">
+            <a href="#" class="navbar-list-items-text" onclick="make_cross()"
+              >Home</a
+            >
+          </li>
+          <li class="navbar-list-items">
+            <a href="#" class="navbar-list-items-text " onclick="make_cross()"
+              >Page</a
+            >
+          </li>
+          <li class="navbar-list-items">
+            <a href="#" class="navbar-list-items-text" onclick="make_cross()"
+              >About</a
+            >
+          </li>
+          <li class="navbar-list-items">
+            <a href="#" class="navbar-list-items-text" onclick="make_cross()"
+              >Gallery</a
+            >
+          </li>
+          <li class="navbar-list-items">
+            <a href="#" class="navbar-list-items-text" onclick="make_cross()"
+              >Contact</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
     <header class="header">
-        <img src="sass/header/img/bg.jpg" alt="" class="header-bgimg">
+      <img src="sass/header/img/bg.jpg" alt="" class="header-bgimg" />
     </header>
     <script src="js/main.js"></script>
   </body>

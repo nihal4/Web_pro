@@ -33,9 +33,9 @@ li {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(38, 38, 38, 0.6784313725);
   margin: 0;
   padding: 0;
+  height: 65px;
 }
 .navbar-part1 {
   display: flex;
@@ -46,12 +46,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-.navbar-logo {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 2rem;
-  font-family: "Josefin Sans", sans-serif;
 }
 .navbar-burger {
   flex-direction: column;
@@ -73,7 +67,14 @@ li {
 }
 .navbar-list-items-text {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.1s;
+  padding: 5px;
+}
+.navbar-list-items-text:hover {
+  color: #f86156;
+  border-bottom: 3px solid #f86156;
 }
 
 .line1 {
@@ -88,13 +89,26 @@ li {
   transform: translate(0px, -7px) rotate(-45deg);
 }
 
+.line1, .line2, .line3 {
+  background-color: #f86156;
+}
+
+.change-color {
+  background-color: #252525;
+}
+
+.color-trans {
+  background-color: rgba(38, 38, 38, 0.2823529412);
+}
+
 @media (max-width: 480px) {
   .navbar-burger {
     display: flex;
   }
   .navbar-part1 {
+    height: 65px;
     width: 100%;
-    background-color: rgba(38, 38, 38, 0.6784313725);
+    background-color: rgba(38, 38, 38, 0.2823529412);
   }
   .navbar-part2 {
     height: 100%;
@@ -106,7 +120,7 @@ li {
     align-items: center;
     justify-content: center;
     transform: translate(-50rem, 0px);
-    background-color: rgba(38, 38, 38, 0.6784313725);
+    background-color: rgba(38, 38, 38, 0.2823529412);
     height: 100%;
     width: 100%;
   }
@@ -131,7 +145,7 @@ li {
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 1000%;
 }
 .header-bgimg {
   height: 100%;
