@@ -101,7 +101,7 @@ li {
   background-color: rgba(38, 38, 38, 0.0901960784);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .navbar-burger {
     display: flex;
   }
@@ -150,46 +150,10 @@ li {
   visibility: visible;
 }
 
-@media (max-width: 768px) {
-  .navbar-burger {
-    display: flex;
-  }
-  .navbar-part1 {
-    padding: 19px 0px;
-    width: 100%;
-    background-color: #252525;
-  }
-  .navbar-part2 {
-    transition: all 0.3s;
-    visibility: hidden;
-    height: 100%;
-    width: 100vw;
-  }
-  .navbar-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50rem, 0px);
-    background-color: #252525;
-    height: 100%;
-    width: 100%;
-  }
-  .navbar-list-items-text {
-    font-size: 1.5rem;
-  }
-  .navbar {
-    position: fixed;
-    z-index: 2;
-    flex-direction: column;
-    justify-content: start;
-    background-color: transparent;
-    flex-wrap: nowrap;
-  }
-  .add_100 {
-    height: 100%;
-  }
+.active {
+  color: #f86156;
 }
+
 .header {
   position: absolute;
   z-index: 1;
@@ -317,4 +281,62 @@ li {
 .loader-box-text {
   font-family: "Josefin Sans", sans-serif;
   color: #f86156;
+}
+
+.page-header {
+  height: 60vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+}
+.page-header-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+.page-header-head {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(38, 38, 38, 0.6352941176);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+}
+.page-header-head-main {
+  color: #ffffff;
+  mix-blend-mode: overlay;
+  font-size: 9rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 5px;
+}
+.page-header-head-sub {
+  color: rgba(255, 255, 255, 0.3568627451);
+}
+.page-header-head-sub-link {
+  color: rgba(255, 255, 255, 0.3568627451);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.page-header-head-sub-link:hover {
+  color: #f86156;
+}
+
+@media (max-width: 480px) {
+  .page-header-head-main {
+    font-size: 4rem;
+  }
+  .page-header {
+    height: 50vh;
+  }
+}
+.section1 {
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=main.css.map */

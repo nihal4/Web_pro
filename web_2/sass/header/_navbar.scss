@@ -72,7 +72,10 @@
 
 
 
-@media (max-width: $normal-mobile){
+
+
+
+@media (max-width:$normal-tablet){
     .navbar-burger{
         display:flex ;
     }
@@ -126,50 +129,6 @@
 .add_dis{
     visibility: visible;
 }
-
-@media (max-width:$normal-tablet){
-    .navbar-burger{
-        display:flex ;
-    }
-    .navbar-part1{
-        //height: 65px;
-        padding: 19px 0px;
-        width: 100%;
-        background-color: $nav-bg-scroll;
-    }
-    .navbar-part2{
-        //height: 60vh;
-        transition: all .3s;
-        visibility: hidden;
-        height: 100%;
-        width: 100vw;
-        
-    }
-    .navbar-list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transform: translate(-50rem,0px);
-        background-color: $nav-bg-scroll;
-        height: 100%;
-        width: 100%;
-        &-items-text{
-            font-size: 1.5rem;
-        }
-        //height: 93vh;
-        //width: 100vw;
-    }
-    .navbar{
-        //height: 100%;
-        position: fixed;
-        z-index: 2;
-        flex-direction: column;
-        justify-content: start;
-        background-color: transparent;
-        flex-wrap: nowrap;
-    }
-    .add_100{
-        height: 100%;
-     }
+.active{
+    color: $naav-text-hover;
 }

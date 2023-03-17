@@ -46,3 +46,18 @@ function onReady(callback) {
     setVisible('#loading', false);
   });
 
+//active page
+jQuery(function($) {
+    
+	var path = window.location.href; 
+	 
+     $('ul li a').each(function() {
+     
+	 if (this.href === path) {
+      
+	  $(this).addClass('active');
+      
+	  }
+    
+	});
+});

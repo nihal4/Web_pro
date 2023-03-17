@@ -1,0 +1,52 @@
+.page-header{
+    height: 60vh;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+    &-img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+    &-head{
+        height: 100%;
+        width: 100%;
+        background-color: $text-bg-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        &-main{
+            color: $font-nav-color;
+            mix-blend-mode:overlay;
+            font-size: 9rem;
+            font-family: $josefin-font;
+            text-transform: uppercase;
+            font-weight: 900;
+            border-radius: 5px;
+        }
+        &-sub{
+            color: $head-text-p;
+            &-link{
+                color: $head-text-p;
+                font-family: $josefin-font;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                &:hover{
+                    color: $naav-text-hover;
+                }
+            }
+        }
+    }
+    
+}
+@media(max-width:$normal-mobile){
+    .page-header-head-main{
+        font-size: 4rem;
+    }
+    .page-header{
+        height: 50vh;
+    }
+}
