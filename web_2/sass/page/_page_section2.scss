@@ -1,51 +1,179 @@
-.section2{
-    position: relative;
-    text-align: center;
-    flex-direction: column;
-    margin: 0;
-    z-index: 1;
-    background-color:$head-text-p;
-    font-family: $josefin-font;
-    color: $text-bg-color;
-    padding: 40px;
-    &-cards{
-        height: 30rem;
-        padding: 20px;
-    }
+.section2 {
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  margin: 0;
+  z-index: 1;
+  background-color: $head-text-p;
+  font-family: $josefin-font;
+  color: $text-bg-color;
+  padding: 40px;
+  &-heading-text{
+    color: $nav-bg-scroll;
+  }
+  &-cards {
+    height: 30rem;
+    padding: 20px;
+  }
 }
 
-.card_box{
-    align-items: center;
-    height: 100%;
-   // padding: 0rem 9.375rem;
-    gap: 5rem;
+.card_box {
+  align-items: center;
+  height: 100%;
+  // padding: 0rem 9.375rem;
+  gap: 5rem;
+  flex-wrap: nowrap;
+}
+.card_body {
+  height: 20rem;
+  border-radius: 5px;
+  background-color: $head-text-p;
+  background-color: rgba(255, 255, 255, 0.074);
+  border-radius: .7rem;
+  transition: all 0.3s;
+  padding: 0;
+  overflow: hidden;
+  border: 3px solid $nav-bg-color;
+  &:hover{
     
+    box-shadow: 0px 0px 8px $nav-bg-scroll;
+  }
+  &:hover .card_body-head{
+    transform: translateY(-20rem);
+  }
+  &:hover .card_body-p{
+    transform: translateY(-17rem);
+  }
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url(page/img/card_bg.jpg);
+    background-size: cover;
+    color: $head-text-p;
+    background-position: center;
+    font-family: $josefin-font;
+    font-weight: 700;
+    transition: all .3s;
+    
+  }
+  &-p{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: $nav-bg-scroll;
+  }
+  //team card
+  &-img{
+    transition: all .3s;
+    width: 50%;
+    border-radius: 100rem;
+  }
+  &-name{
+    display: block;
+    &-main{
+        display: block;
+        font-size: 1.5rem;
+        color: $nav-bg-scroll;
+    }
+    &-sub{
+        display: block;
+        color: $naav-text-hover;
+        font-size: .5rem;
+        transition: all .3s;
+    }
+  }
 }
-.card_body{
+.card_body_team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    gap: 2rem;
+    padding: 20px;
+    transition: all .3s;
+   &:hover{
+    background-color: $naav-text-hover;
+   }
+   &:hover .card_body-img{
+    transform: rotate(45deg);
+   }
+   &:hover .card_body-name-sub{
+    color: $nav-bg-scroll;
+   }
+   &:hover .fa{
+    color: $nav-bg-scroll;
+   }
+}
+
+.social{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.fa {
+    transition: all .3s;
+    font-size: 20px;
+    text-decoration: none;
+    color: $naav-text-hover;
+  }
+
+
+@media (max-width: $normal-tablet) {
+  .card_box {
+    gap: .2rem;
+    padding: 0;
+  }
+  .section2-cards {
     height: 20rem;
-    border-radius: 5px;
-    background-color: aqua;
+  }
+  .card_body {
+    height: 100%;
+    &-name-main{
+        font-size: 1rem;
+    }
+    &-img{
+        width: 65%;
+    }
+  }
+  .card_body:hover .card_body-p{
+    transform: translateY(-15.5rem);
+  }
+  .card_body-p{
+    font-size: .7rem;
+  }
+}
+@media (max-width: $normal-mobile) {
+  .card_box {
+    flex-direction: column;
+    padding: 0;
+    gap: 3rem;
+  }
+  .section2-cards {
+    height: 50rem;
+  }
+  .card_body-name-main{
+    font-size: 1.5rem;
+}
+  .card_body:hover .card_body-p{
+    transform: translateY(-13rem);
+  }
+  .team{
+    //height: 100rem;
+    //margin-bottom: 5rem;
+  }
 }
 
-
-@media (max-width:$normal-tablet) {
-    .card_box{
-        gap: 1rem;
-        padding: 0;
-    }
-    .section2-cards{
-        height: 20rem;
-    }
-    .card_body{
-        height: 100%;
-    }
-}
-@media (max-width:$normal-mobile) {
-    .card_box{
-        flex-direction: column;
-        padding: 0;
-    }
-    .section2-cards{
-        height: 50rem;
-    }
+.footer{
+    position: relative;
+    background-color: $naav-text-hover;
+    height: 3rem;
+    z-index: 1;
+    width: 100%;
 }
