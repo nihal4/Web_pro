@@ -12,17 +12,19 @@
     color: $nav-bg-scroll;
   }
   &-cards {
+    
     height: 30rem;
     padding: 20px;
   }
 }
 
 .card_box {
+    flex-wrap: wrap-reverse;
   align-items: center;
   height: 100%;
   // padding: 0rem 9.375rem;
   gap: 5rem;
-  flex-wrap: nowrap;
+
 }
 .card_body {
   height: 20rem;
@@ -123,7 +125,9 @@
     text-decoration: none;
     color: $naav-text-hover;
   }
-
+.team{
+    display:flex;
+}
 
 @media (max-width: $normal-tablet) {
   .card_box {

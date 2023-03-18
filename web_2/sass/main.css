@@ -415,10 +415,10 @@ li {
 }
 
 .card_box {
+  flex-wrap: wrap-reverse;
   align-items: center;
   height: 100%;
   gap: 5rem;
-  flex-wrap: nowrap;
 }
 
 .card_body {
@@ -518,6 +518,10 @@ li {
   font-size: 20px;
   text-decoration: none;
   color: #f86156;
+}
+
+.team {
+  display: flex;
 }
 
 @media (max-width: 768px) {
