@@ -19,11 +19,17 @@
         transform: scale(.5);
     }
 }
-.dark_theme{
-    color: $color-white;
-    background-color: $color-black;
-}
+
 .white{
     background-color: $color-white;
     box-shadow: 0px 0px 21px $color-white;
 }
+
+.theme-light {
+    background-color: $color-white;
+    color: $color-black;
+  }
+.theme-dark {
+    background-color: $color-black;
+    color: $color-white;
+  }

@@ -6,14 +6,16 @@
 }
 html {
     height: 100%;
+    transition: $transition-all;
+    transition-timing-function: $transition-timing-function-all;
   }
 body{
     transition: $transition-all;
     transition-timing-function: $transition-timing-function-all;
     height: 100%;
     width: auto;
-    background-color: $color-white;
+    //background-color: $color-white;
     font-family: $Quicksand;
-    color: $color-black;
+    //color: $color-black;
     font-size: $standurt-font;
 }

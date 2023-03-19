@@ -1,6 +1,7 @@
 //colors
 $color-white:#fcfcfc;
-$color-black:#222831;
+$color-black:#2b2b28;
+$color-red:#dc2f2f;
 
 //fonts
 $Quicksand: 'Quicksand', sans-serif;
@@ -12,5 +13,10 @@ $full_height:100vh;
 $full_width:100vw;
 
 //trans time
-$transition-all: all 500ms cubic-bezier(0.600, 0.040, 0.090, 0.785); /* custom */
+$transition-all: all .5s cubic-bezier(0.600, 0.040, 0.090, 0.785); /* custom */
 $transition-timing-function-all: cubic-bezier(0.600, 0.040, 0.090, 0.785); /* custom */
+
+//screen
+
+$mini-phone:320px;
+$normal-phone:480px;
