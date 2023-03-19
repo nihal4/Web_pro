@@ -4,6 +4,7 @@
   flex-direction: column;
   margin: 0;
   z-index: 1;
+  height: 100vh;
   background-color: $head-text-p;
   font-family: $josefin-font;
   color: $text-bg-color;
@@ -89,6 +90,9 @@
     }
   }
 }
+.card_box_team{
+  gap: 1rem;
+}
 .card_body_team{
     display: flex;
     flex-direction: column;
@@ -130,6 +134,9 @@
 }
 
 @media (max-width: $normal-tablet) {
+  .section2{
+    height: auto;
+  }
   .card_box {
     gap: .2rem;
     padding: 0;

@@ -22,6 +22,25 @@ li {
   margin: 0;
 }
 
+@media (min-width: 1024px) {
+  .hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 500ms cubic-bezier(0.47, 0, 0.745, 0.715); /* easeInSine */
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); /* easeInSine */
+  }
+  .slide_up {
+    transform: translateY(100%);
+    transition: all 500ms cubic-bezier(0.47, 0, 0.745, 0.715); /* easeInSine */
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); /* easeInSine */
+  }
+  .show {
+    opacity: 0;
+    transition: all 2s;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .navbar {
   position: fixed;
   width: 100%;
@@ -281,7 +300,7 @@ li {
 }
 
 .page-header {
-  height: 60vh;
+  height: 100vh;
   position: relative;
   z-index: 1;
   margin-bottom: 10%;
@@ -333,8 +352,17 @@ li {
     height: 50vh;
   }
 }
+@media (max-width: 768px) {
+  .page-header {
+    height: 50vh;
+  }
+  .explore_btn {
+    display: none;
+  }
+}
 .section1 {
   position: relative;
+  height: 100vh;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -346,6 +374,7 @@ li {
   margin-bottom: 6%;
 }
 .section1-text {
+  text-align: left;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -380,6 +409,7 @@ li {
 
 @media (max-width: 768px) {
   .section1 {
+    height: auto;
     flex-direction: column;
     gap: 2rem;
   }
@@ -400,6 +430,7 @@ li {
   flex-direction: column;
   margin: 0;
   z-index: 1;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.3568627451);
   font-family: "Josefin Sans", sans-serif;
   color: rgba(38, 38, 38, 0.6352941176);
@@ -481,6 +512,10 @@ li {
   transition: all 0.3s;
 }
 
+.card_box_team {
+  gap: 1rem;
+}
+
 .card_body_team {
   display: flex;
   flex-direction: column;
@@ -524,6 +559,9 @@ li {
 }
 
 @media (max-width: 768px) {
+  .section2 {
+    height: auto;
+  }
   .card_box {
     gap: 0.2rem;
     padding: 0;

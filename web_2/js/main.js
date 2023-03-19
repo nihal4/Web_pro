@@ -61,3 +61,21 @@ jQuery(function($) {
     
 	});
 });
+
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    console.log(entry)
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+
+    }else{
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+const hidden = document.querySelectorAll('.hidden');
+const slide_up = document.querySelectorAll('.slide_up');
+hidden.forEach((el)=> observer.observe(el));
+slide_up.forEach((el)=> observer.observe(el));
