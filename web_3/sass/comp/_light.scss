@@ -1,0 +1,29 @@
+.light{
+    
+    position: fixed;
+    left: 90%;
+    top: 10%;
+    z-index: 10;
+    height: 30px;
+    width: 30px;
+    background-color: $color-black;
+    border-radius: 50rem;
+    box-shadow: 0px 0px 21px $color-black;
+    cursor: pointer;
+    transition: $transition-all;
+    transition-timing-function: $transition-timing-function-all;
+    &:hover{
+        transform: scale(1.2);
+    }
+    &:active{
+        transform: scale(.5);
+    }
+}
+.dark_theme{
+    color: $color-white;
+    background-color: $color-black;
+}
+.white{
+    background-color: $color-white;
+    box-shadow: 0px 0px 21px $color-white;
+}
