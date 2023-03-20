@@ -1,8 +1,17 @@
-.fade_away{
-    transform: translateX(-100%);
-    transition: $transition-all;
-  }
-  .hide{
+
+.fade_in{
+  transform: translateX(0);
+  transition: $transition-all;
+}
+.hide{
     transition:$transition-all;
     transform: translateX(-100%);
-  }
+}
+.fade_away{
+  transform: translateX(-100%);
+  transition: $transition-all;
+}
+.show{
+  height: 80%;
+  
+}

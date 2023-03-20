@@ -74,9 +74,37 @@ document.addEventListener("DOMContentLoaded", function () {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-var fade_away = document.querySelector(".hero");
-var s1 = document.querySelector('.s1');
-function fade(){
-  fade_away.classList.add('fade_away');
-  s1.classList.remove('hide');
+//new fade in & fade away
+function fade(fade_name,fade_name2){
+  localStorage.setItem('fade',fade_name)
+  localStorage.setItem('fade2',fade_name2)
+  document.querySelector('.hero').classList.add(fade_name);
+  document.querySelector('.s1').classList.add(fade_name2)
+}
+
+function example(){
+  if(localStorage.getItem("fade") === 'fade_away' && localStorage.getItem('fade2')=='fade_in'){
+      fade('fade_in','fade_away');
+      document.querySelector('.hero').classList.remove('fade_away');
+  }else{
+    fade('fade_away','fade_in')
+    
+    document.querySelector('.s1').classList.remove('fade_away');
+  }
+}
+(function(){
+  if(localStorage.getItem('fade')==='fade_away' && localStorage.getItem('fade2')=='fade_in'){
+    fade('fade_away','fade_in')
+  }else{
+    fade('fade_in','fade_away')
+  }
+})();
+
+//noclick
+
+var box2 = document.querySelector('.profile-box2');
+var box1 = document.querySelector('.profile-box1');
+function show(){
+  box2.classList.toggle('show');
+  document.querySelector('.btn-a') = "close";
 }

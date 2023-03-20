@@ -165,8 +165,7 @@ body {
           user-select: none;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  -webkit-animation: glow 8s infinite;
-  -webkit-animation: vis 8s;
+  animation: glow 2s infinite, vis 1s;
 }
 .btn:active {
   transform: scale(0.5);
@@ -180,14 +179,79 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 .s1-box {
-  border-radius: 0.5rem;
-  height: 80%;
-  width: 80%;
-  background-color: rgba(255, 136, 76, 0.3215686275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+}
+
+.profile {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.profile-box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+}
+.profile-box2 {
+  height: 0;
+  background-color: transparent;
+  border: 2px solid #ff884c;
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+  animation: glow 2s infinite, vis 1s;
+  border-radius: 5px;
+  width: 50%;
+}
+.profile-img {
+  border-radius: 50%;
+  width: 24%;
+  border: 2px solid #ff884c;
+}
+.profile-name {
+  font-weight: 300;
+  font-size: 60%;
+  display: inline-block;
+}
+.profile-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.profile-skills-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.profile-skills-box i {
+  font-size: 80%;
+}
+
+.fade_in {
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+}
+
+.hide {
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+  transform: translateX(-100%);
 }
 
 .fade_away {
@@ -195,7 +259,6 @@ body {
   transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
 }
 
-.hide {
-  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
-  transform: translateX(-100%);
+.show {
+  height: 80%;
 }/*# sourceMappingURL=main.css.map */

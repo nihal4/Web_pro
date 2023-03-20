@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--google icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <!--font-aw-->
     <link
       rel="stylesheet"
@@ -24,15 +29,43 @@
     <div class="light" onclick="toggleTheme()"></div>
     <header class="hero">
       <div class="container">
-        <p class="hero-p"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+        <p class="hero-p">
+          <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+        </p>
       </div>
-      <a class="btn" onclick="fade()">
-        Explore
-      </a>
+      <a class="btn" onclick="example()"> Explore </a>
     </header>
-    <section class="s1 hide">
-      <div class="s1-box">
+    <section class="s1">
+      <div class="profile">
+        <div class="profile-box1">
+          <img src="imgs/profile.jpg" alt="" class="profile-img" />
+          <h1 class="profile-name">Nihal Ahmed</h1>
+          <div class="profile-skills">
+            <div class="profile-skills-box">
+              <i class="devicon-html5-plain-wordmark"></i>
+              <i class="devicon-css3-plain-wordmark"></i>
+            </div>
+            <div class="profile-skills-box">
+              <i class="devicon-javascript-plain"></i>
+              <i class="devicon-sass-original"></i>
+            </div>
+            <div class="profile-skills-box">
+              <i class="devicon-python-plain-wordmark"></i>
+              <i class="devicon-c-plain"></i>
+            </div>
+            <div class="profile-skills-box">
+              <i class="devicon-cplusplus-plain"></i>
+              <i class="devicon-blender-original"></i>
+            </div>
+          </div>
+        </div>
+        <div class="profile-box2">
 
+        </div>
+      </div>
+      <div class="s1-box">
+        <a class="btn" onclick="example()"> back </a>
+        <a class="btn btn-a" onclick="show()"> menu</a>
       </div>
     </section>
     <script src="js/main.js"></script>

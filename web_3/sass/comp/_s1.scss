@@ -6,11 +6,66 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    //background-color: $color-red;
+    gap: 2rem;
     &-box{
-      border-radius: .5rem;
-      height: 80%;
-      width: 80%;
-      background-color: $color-red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
       backdrop-filter: blur(5px);
     }
   }
+.profile{
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  &-box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(0);
+    transition: $transition-all;
+  }
+  &-box2{
+    height: 0;
+    background-color: transparent;
+    border: 2px solid $color-red-high;
+    transition: $transition-all;
+    animation: glow 2s infinite,vis 1s;
+    border-radius: 5px;
+    width: 50%;
+  }
+  &-img{
+    border-radius: 50%;
+    width: 24%;
+    border: 2px solid $color-red-high;
+  }
+  &-name{
+    font-weight: 300;
+    font-size: 60%;
+    display: inline-block;
+  }
+  &-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    &-box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    &-box i{
+      font-size: 80%;
+    }
+  }
+}
