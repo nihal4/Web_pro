@@ -1,0 +1,16 @@
+.s1{
+    height: 100%;
+    width: 100%;
+    transition: $transition-all;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-box{
+      border-radius: .5rem;
+      height: 80%;
+      width: 80%;
+      background-color: $color-red;
+      backdrop-filter: blur(5px);
+    }
+  }

@@ -1,0 +1,8 @@
+.fade_away{
+    transform: translateX(-100%);
+    transition: $transition-all;
+  }
+  .hide{
+    transition:$transition-all;
+    transform: translateX(-100%);
+  }

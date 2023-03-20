@@ -4,43 +4,60 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    gap: 5rem;
+    width: 100%;
+    gap: 3rem;
+    position: absolute;
     
 }
 
-@media (min-width:$mini-phone) and (max-width:$normal-phone) {
-    .hero{
-        &-header{
-            font-size: 100%;
-        }
-    }
-}
-
-.container p {
+.hero-p{
     font-size: 3rem;
     padding: 0.5rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-align: center;
     overflow: hidden;
-  }
-.container p span.typed-text {
     font-weight: 300;
+  }
+.typed-text {
+    font-family: $Quicksand;
+    text-transform:unset;
+    font-weight: 300;
+    user-select: none;
   }
 .container p span.cursor {
     display: inline-block;
-    background-color: $color-red;
+    background-color: $color-red-high;
     margin-left: 0.1rem;
     width: 3px;
     animation: blink 1s infinite;
+    user-select: none;
   }
 .container p span.cursor.typing {
     animation: none;
   }
-@keyframes blink {
-    0%  { background-color: $color-red; }
-    49% { background-color: $color-red; }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
-    100%  { background-color: $color-red; }
+
+.btn{
+  font-size: 50%;
+  text-transform: uppercase;
+  border-radius: 50rem;
+  border: 2px solid $color-red-high;
+  padding:0px 10px;
+  cursor: pointer;
+  background-color: $color-red;
+  transition: $transition-all;
+  font-weight: 400;
+  text-decoration: none;
+  user-select: none;
+  backdrop-filter: blur(5px);
+  -webkit-animation: glow 8s infinite;
+  -webkit-animation: vis 8s ;
+  &:active{
+    transform: scale(0.5);
+  }
+}
+
+
+@media (min-width:$mini-phone) and (max-width:$normal-phone) {
+  
 }

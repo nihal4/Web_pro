@@ -1,5 +1,50 @@
 /* custom */
 /* custom */
+@keyframes blink {
+  0% {
+    background-color: #ff884c;
+  }
+  49% {
+    background-color: #ff884c;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ff884c;
+  }
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 8px #ff884c;
+  }
+  20% {
+    box-shadow: 2px 0px 8px #ff884c;
+  }
+  40% {
+    box-shadow: 0px 2px 8px #ff884c;
+  }
+  60% {
+    box-shadow: 2px 0px 8px #ff884c;
+  }
+  100% {
+    box-shadow: 0px 0px 8px #ff884c;
+  }
+}
+@keyframes vis {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -18,6 +63,7 @@ body {
   transition-timing-function: cubic-bezier(0.6, 0.04, 0.09, 0.785);
   height: 100%;
   width: auto;
+  font-weight: 300;
   font-family: "Quicksand", sans-serif;
   font-size: 3rem;
 }
@@ -64,53 +110,92 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  gap: 5rem;
+  width: 100%;
+  gap: 3rem;
+  position: absolute;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .hero-header {
-    font-size: 100%;
-  }
-}
-.container p {
+.hero-p {
   font-size: 3rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-align: center;
   overflow: hidden;
+  font-weight: 300;
 }
 
-.container p span.typed-text {
+.typed-text {
+  font-family: "Quicksand", sans-serif;
+  text-transform: unset;
   font-weight: 300;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .container p span.cursor {
   display: inline-block;
-  background-color: #dc2f2f;
+  background-color: #ff884c;
   margin-left: 0.1rem;
   width: 3px;
   animation: blink 1s infinite;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .container p span.cursor.typing {
   animation: none;
 }
 
-@keyframes blink {
-  0% {
-    background-color: #dc2f2f;
-  }
-  49% {
-    background-color: #dc2f2f;
-  }
-  50% {
-    background-color: transparent;
-  }
-  99% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: #dc2f2f;
-  }
+.btn {
+  font-size: 50%;
+  text-transform: uppercase;
+  border-radius: 50rem;
+  border: 2px solid #ff884c;
+  padding: 0px 10px;
+  cursor: pointer;
+  background-color: rgba(255, 136, 76, 0.3215686275);
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+  font-weight: 400;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-animation: glow 8s infinite;
+  -webkit-animation: vis 8s;
+}
+.btn:active {
+  transform: scale(0.5);
+}
+
+.s1 {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s1-box {
+  border-radius: 0.5rem;
+  height: 80%;
+  width: 80%;
+  background-color: rgba(255, 136, 76, 0.3215686275);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.fade_away {
+  transform: translateX(-100%);
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+}
+
+.hide {
+  transition: all 0.5s cubic-bezier(0.6, 0.04, 0.09, 0.785);
+  transform: translateX(-100%);
 }/*# sourceMappingURL=main.css.map */
