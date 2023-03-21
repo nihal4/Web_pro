@@ -12,6 +12,6 @@
   transition: $transition-all;
 }
 .show{
-  height: 80%;
-  
+  visibility: visible;
+  opacity: 1;
 }

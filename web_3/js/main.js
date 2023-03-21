@@ -1,4 +1,6 @@
 const light = document.querySelector(".light");
+const menu = document.querySelectorAll('#lines')
+console.log(menu)
 //
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
@@ -10,9 +12,20 @@ function toggleTheme() {
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-light");
     light.classList.remove("white");
+    menu[0].classList.remove('white');
+    menu[1].classList.remove('white');
+    menu[2].classList.remove('white');
+    document.querySelector('.link').classList.remove('white');
+
+    
   } else {
     setTheme("theme-dark");
+    document.querySelector('.link').classList.add('white');
     light.classList.add("white");
+    menu[0].classList.add('white');
+    menu[1].classList.add('white');
+    menu[2].classList.add('white');
+    
   }
 }
 // Immediately invoked function to set the theme on initial load
@@ -20,9 +33,19 @@ function toggleTheme() {
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-dark");
     light.classList.add("white");
+    document.querySelector('.link').classList.add('white');
+    menu[0].classList.add('white');
+    menu[1].classList.add('white');
+    menu[2].classList.add('white');
+    
   } else {
     setTheme("theme-light");
+    document.querySelector('.link').classList.remove('white');
     light.classList.remove("white");
+    menu[0].classList.remove('white');
+    menu[1].classList.remove('white');
+    menu[2].classList.remove('white');
+    
   }
 })();
 
@@ -105,6 +128,51 @@ function example(){
 var box2 = document.querySelector('.profile-box2');
 var box1 = document.querySelector('.profile-box1');
 function show(){
-  box2.classList.toggle('show');
-  document.querySelector('.btn-a') = "close";
+  menu[0].classList.toggle('rotate1')
+  menu[1].classList.toggle('rotate3')
+  menu[2].classList.toggle('rotate2')
+}
+//
+var proName = document.querySelector('.profile-name');
+
+names = ['Sir potato the third','potato boiii','nihal ahmed']
+
+textSequense(0)
+function textSequense(i){
+  if(names.length >i){
+    setTimeout(function(){
+      proName.innerHTML = names[i]
+      textSequense(++i)
+    },3000)
+  }else if (names.length==i){
+    textSequense(0)
+  }
+}
+
+//function float()
+var link = document.querySelector('.link');
+var logoIcon = document.querySelector('.devicon-github-original')
+var links = ['https://www.facebook.com/vrubivrom/','https://www.google.com/','https://github.com/nihal4']
+var logos = ['fab fa-facebook-f','fab fa-instagram','devicon-github-original']
+logo(0)
+function logo(i){
+  if(links.length >i){
+    setTimeout(function(){
+      link.href = links[i]
+      logoIcon.className = logos[i]
+      logo(++i)
+    },5000)
+  }else if (links.length==i){
+    logo(0)
+  }
+}
+
+//new slide apper
+
+var allBox = document.querySelectorAll('.profile-skills-box')
+
+function slide_left(i){
+  if(allBox.length>i){
+    
+  }
 }

@@ -19,7 +19,7 @@
   }
 .profile{
   height: 80%;
-  width: 80%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,28 +34,33 @@
     transition: $transition-all;
   }
   &-box2{
-    height: 0;
-    background-color: transparent;
-    border: 2px solid $color-red-high;
-    transition: $transition-all;
-    animation: glow 2s infinite,vis 1s;
+    height: 80%;
     border-radius: 5px;
     width: 50%;
+    overflow: hidden;
+    transition: $transition-all;
+    &-header{
+      font-weight: 300;
+      text-transform: capitalize;
+    }
   }
   &-img{
     border-radius: 50%;
     width: 24%;
     border: 2px solid $color-red-high;
+    animation: floating 2s infinite;
   }
   &-name{
-    font-weight: 300;
+    font-weight: 500;
     font-size: 60%;
     display: inline-block;
+    text-transform: capitalize;
+    transition: $transition-all;
   }
   &-skills{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 20px;
     &-box{
@@ -63,9 +68,22 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
+      position: absolute;
     }
     &-box i{
       font-size: 80%;
     }
   }
+}
+.profile-box2 i{
+  font-size: 2rem;
+  position: absolute;
+  transition: $transition-all;
+}
+.link{
+  text-decoration: none;
+  color: $color-black;
+  transition: $transition-all;
+  transition-timing-function: $transition-timing-function-all;
+  
 }
