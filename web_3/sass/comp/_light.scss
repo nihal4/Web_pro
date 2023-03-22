@@ -34,3 +34,7 @@
     background-color: $color-black;
     color: $color-white;
   }
+.slide{
+    transform: translateX(-3px);
+    transition: all 1s;
+}
