@@ -1,0 +1,121 @@
+$color-white1: #e3e3e3;
+$color-white2: #eeeeee;
+$color-pest: #d8d8d8;
+$color-eye: #f8f8f8;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white1;
+}
+
+.loginBox {
+  background-color: $color-white2;
+  height: 70%;
+  width: 30%;
+  border-radius: 10px;
+  border: 3px solid $color-pest;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  &-eye {
+    height: 10%;
+    width: 50%;
+    border: 3px solid $color-pest;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+  }
+}
+.cover{
+  height: 100%;
+  width: 100%;
+  background-color: rebeccapurple;
+  position: absolute;
+  transform: translateX(150%);
+  transition: all .3s;
+}
+.hide{
+  transform: translateX(0);
+}
+.show{
+  transform: translateX(150%);
+}
+.eyes {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: $color-eye;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px $color-pest;
+  padding: 10px;
+  &::before {
+    content:"";
+    top: 50%;
+    left: 35px;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    border: 3px solid skyblue;
+    box-sizing: border-box;
+  }
+}
+.header{
+  font-family: sans-serif;
+}
+.email{
+  border: none;
+  outline: none;
+  height: 5%;
+  width: 70%;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  border: 2px solid $color-pest;
+  &:focus{
+    outline: none;
+    border: none;
+    border: 2px solid $color-pest;
+  }
+}
+.pass{
+  border: none;
+  outline: none;
+  height: 5%;
+  width: 70%;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  border: 2px solid $color-pest;
+  &:focus{
+    outline: none;
+    border: none;
+    border: 2px solid $color-pest;
+  }
+}
