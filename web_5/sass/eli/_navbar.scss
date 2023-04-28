@@ -1,0 +1,39 @@
+.navbar{
+    text-align: center;
+    &-logo{
+
+
+        &-main{
+            color: $lite-gray-color;
+            font-size: 8rem;
+            font-weight: 600;
+        }
+        &-sub{
+            font-family: $Montserrat;
+            color: $color-yellow;
+            font-size: 4rem;
+            font-weight: 600;
+        }
+    }
+    &-text{
+        font-family: $Dancing;
+        color: $color-yellow;
+        font-weight: 600;
+        font-size: 2.5rem;
+        margin-bottom: 8rem;
+    }
+}
+
+.fa-angle-down{
+    color: $lite-gray-color;
+    font-weight: 100;
+    font-size: 4rem;
+    cursor: pointer;
+    animation: move_up 5s infinite ;
+}
+
+@media screen and (max-width: $phone-max){
+    .navbar-text{
+        font-size: 1.5rem;
+    }
+}

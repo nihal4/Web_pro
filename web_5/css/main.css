@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/*
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-user-select: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #5d5c61;
+}
+
+@keyframes move_up {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.navbar {
+  text-align: center;
+}
+.navbar-logo-main {
+  color: #8f8f8f;
+  font-size: 8rem;
+  font-weight: 600;
+}
+.navbar-logo-sub {
+  font-family: "Montserrat", sans-serif;
+  color: #B1A296;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.navbar-text {
+  font-family: "Dancing Script", cursive;
+  color: #B1A296;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 8rem;
+}
+
+.fa-angle-down {
+  color: #8f8f8f;
+  font-weight: 100;
+  font-size: 4rem;
+  cursor: pointer;
+  animation: move_up 5s infinite;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-text {
+    font-size: 1.5rem;
+  }
+}
+.header {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}/*# sourceMappingURL=main.css.map */
